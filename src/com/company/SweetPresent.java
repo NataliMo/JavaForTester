@@ -42,8 +42,6 @@ public class SweetPresent {
         for(Testy num: sweetPresent)
             ollWeight = num.getWeight() + ollWeight;
         System.out.println(ollWeight);
-
-
     }
 }
 
