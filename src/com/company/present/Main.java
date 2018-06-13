@@ -1,15 +1,13 @@
-package com.company.present;
+package com.company;
 
-import com.company.present.sweet.*;
-
-import java.util.Date;
+import com.company.present.*;
 
 /**
- * Created by natalamoskova on 08.06.2018.
+ * Created by natalamoskova on 13.06.2018.
  */
-public class Main {
+public class SweetPresent {
     public static void main(String[] args) {
-         // составение подарка
+        // составение подарка
 
         Candies candies1 = new Candies("Toffee", 4.6, 0.05, 1018);
         Candies candies2 = new Candies("Rafaello", 5.5, 0.10, 2831);
@@ -31,7 +29,7 @@ public class Main {
 
         System.out.println("В подарке содержаться cладости: " );
         for (Testy num: sweetPresent)
-        System.out.print(num.getBrand() + " ");
+            System.out.print(num.getBrand() + " ");
 
         System.out.println("\nЦена подарка(руб): ");
         double ollPrice = 0;
@@ -44,16 +42,93 @@ public class Main {
         for(Testy num: sweetPresent)
             ollWeight = num.getWeight() + ollWeight;
         System.out.println(ollWeight);
+    }
+}
+
+class Testy {
+
+    private String brand;
+    private double price;
+    private double weight;
+    private int id;
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getBrand() {
+
+        return brand;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Testy(String brand, double price, double weight, int id) {
+        this.brand = brand;
+        this.price = price;
+        this.weight = weight;
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return ("Сладости: " + brand + "Вес подарка: " + weight + "Стоимость: " + price);
+    }
+
+}
+
+class Candies extends Testy {
+
+    public Candies(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
+    }
+
+}
+
+class Caramel extends Testy {
+    public Caramel(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
+    }
+}
+
+class Chokolate extends Testy {
 
 
+    public Chokolate(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
+    }
+}
 
+class Gums extends Testy {
+    public Gums(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
+    }
+}
 
-
-
-
-
-
-
-
+class Marmalade extends Testy {
+    public Marmalade(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
     }
 }
