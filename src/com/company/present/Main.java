@@ -1,7 +1,5 @@
 package com.company.present;
 
-import com.company.present.sweet.*;
-
 import java.util.Date;
 
 /**
@@ -46,14 +44,101 @@ public class Main {
         System.out.println(ollWeight);
 
 
+    }
 
 
 
+}
+
+class Testy {
+
+    private String brand;
+    private double price;
+    private double weight;
+    private int id;
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getBrand() {
+
+        return brand;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Testy(String brand, double price, double weight, int id) {
+        this.brand = brand;
+        this.price = price;
+        this.weight = weight;
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return ("Сладости: " + brand + "Вес подарка: " + weight + "Стоимость: " + price);
+    }
+
+}
+
+class Candies extends Testy {
+
+    public Candies(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
+    }
 
 
 
+}
 
-
-
+class Caramel extends Testy {
+    public Caramel(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
     }
 }
+
+class Chokolate extends Testy {
+
+
+    public Chokolate(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
+    }
+}
+
+class Gums extends Testy {
+    public Gums(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
+    }
+}
+
+class Marmalade extends Testy {
+    public Marmalade(String brand, double price, double weight, int id) {
+        super(brand, price, weight, id);
+    }
+}
+
+
+
