@@ -46,7 +46,6 @@ public class Main {
 
     }
 
-    
 }
 
 class Testy {
@@ -108,9 +107,7 @@ class Candies extends Testy {
     public Candies(String brand, double price, double weight, int id) {
         super(brand, price, weight, id);
     }
-
-
-
+    
 }
 
 class Caramel extends Testy {
