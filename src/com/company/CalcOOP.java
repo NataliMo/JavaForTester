@@ -81,6 +81,7 @@ class Calculator {
 
     private float a;
     private float b;
+    
     private int c;
     private int d;
 
