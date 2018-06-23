@@ -5,6 +5,9 @@ package com.company;
  */
 public class WorkFile {
     public static void main(String[] args) {
-        
+        //работа с файлом
+        System.out.println("Работа с файлом");
+
+
     }
 }
